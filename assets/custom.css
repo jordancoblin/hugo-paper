@@ -18,3 +18,11 @@
 .prose p > code:not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
     content: none;
 }
+
+.img-avatar {
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 180px;
+    height: 200px;
+}
