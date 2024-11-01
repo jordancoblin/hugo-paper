@@ -106,6 +106,14 @@
   />
   {{ end }}
 
+  {{ with .Params.featured_image }}
+    <meta property="og:image" content="{{ . }}" />
+    <meta name="twitter:image" content="{{ . }}" />
+  {{ else }}
+    <meta property="og:image" content="{{ .Site.Params.default_image }}" />
+    <meta name="twitter:image" content="{{ .Site.Params.default_image }}" />
+  {{ end }}
+
   <!-- canonical -->
   <link rel="canonical" href="{{ .Permalink }}" />
   {{ end }}
